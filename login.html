@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Identificate</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Sandra Arcas">
+    <meta name="description" content="Librería online">
+    <meta name="keywords" content="libros ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Con esta etiqueta, evito que se indexe la página en los buscadores-->
+    <meta name="robots" content="noindex">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/icono_libreria.ico">
+
+    <!--Link para la página de iconos font-awesome (version 5.13.0)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <!--Estilos CSS propios de bootstrap (version 4.1.3)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Estilos CSS-->
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+</head>
+
+<body class="abajo">
+    <section class="loginPage">
+        <article>
+            <h2 class="mb-5">IDENTIFÍCATE</h2>
+            <form method="POST" action="#" id="loginForm" onsubmit="return validateLoginForm()" name="loginForm">
+                <div class="form-group">
+                    <label for="emailLogin">Email</label>
+                    <!--Ojo porque aquí se está poniendo un campo de email como type = "txt". Lo comento con Ismael y me dice que mejor hacer la validación con JS porque si lo pongo como type = "email", aparecen las validaciones de HTML5-->
+                    <input type="text" class="form-control mr-sm-2" aria-describedby="Email" placeholder="Introduce tu email" name="emailLogin" id="emailLogin">
+                    <div class="invalid-feedback" id="errorEmailLogin"></div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordLogin">Contraseña</label>
+                    <input type="password" class="form-control mr-sm-2" id="passwordLogin" name="passwordLogin" placeholder="Escribe tu contraseña" aria-label="contraseña">
+                    <!--PENDIENTE: El botón de mostrar/ocultar contraseña está sin acabar hasta que sepa como hacerlo con JS -->
+                    <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                    <div class="invalid-feedback" id="errorPasswordLogin"></div>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-dark mx-2 my-sm-0">Iniciar sesión</button>
+                </div>
+
+                <small><a href="#">¿Has olvidado tu contraseña?</a></small>
+
+            </form>
+        </article>
+
+    </section>
+
+
+    <aside>
+        <!--en principio esta página no llevará publicidad-->
+    </aside>
+
+
+    <!--PIE-->
+    <div class="footer-abajo">
+        <footer class="mt-3">
+            <div class="contenedor-pie">
+                <p>Sobre nosotros</p>
+                <a class="item-pie" href="#">Quienes somos</a>
+                <a class="item-pie" href="#">Contacta</a>
+                <a class="item-pie" href="#">Librerías</a>
+            </div>
+
+            <div class="contenedor-pie">
+                <p>Preguntas frecuentes</p>
+                <a class="item-pie" href="#">FAQ's</a>
+                <a class="item-pie" href="#">Métodos de pago</a>
+                <a class="item-pie" href="#">Devoluciones</a>
+            </div>
+
+
+        </footer>
+
+        <p id="copyright">Página web hecha con <s>mucho amor</s> mucha paciencia por Sandra</p>
+    </div>
+
+    <!--Scripts de bootstrap 4.1.3-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--Scripts principal-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

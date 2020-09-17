@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Regístrate</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Sandra Arcas">
+    <meta name="description" content="Librería online">
+    <meta name="keywords" content="libros ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Con esta etiqueta, evito que se indexe la página en los buscadores-->
+    <meta name="robots" content="noindex">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/icono_libreria.ico">
+
+    <!--Link para la página de iconos font-awesome (version 5.13.0)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <!--Estilos CSS propios de bootstrap (version 4.1.3)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Estilos CSS-->
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+</head>
+
+<body>
+    <section class="registration">
+        <article>
+            <h2 class="mb-5">REGÍSTRATE</h2>
+            <form method="POST" action="#" id="registrationForm" onsubmit="return validateRegistrationForm()" name="registrationForm">
+
+                <div class="form-group">
+                    <label for="emailRegistration">Email</label>
+                    <!--Ojo porque aquí se está poniendo un campo de email como type = "txt". Lo comento con Ismael y me dice que mejor hacer la validación con JS porque si lo pongo como type = "email", aparecen las validaciones de HTML5-->
+                    <input type="text" class="form-control mr-sm-2" aria-describedby="Email" placeholder="Introduce tu email" name="emailRegistration" id="emailRegistration">
+                    <div class="invalid-feedback" id="errorEmailRegistration"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="passwordRegistration1">Contraseña</label>
+                        <input type="password" class="form-control mr-sm-2" id="passwordRegistration1" name="passwordRegistration1" placeholder="Escribe una contraseña" aria-label="contraseña">
+                        <!--PENDIENTE: El botón de mostrar/ocultar contraseña está sin acabar hasta que sepa como hacerlo con JS -->
+                        <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                        <div class="invalid-feedback" id="errorPasswordRegistration1"></div>
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label for="passwordRegistration2">Repetir contraseña</label>
+                        <input type="password" class="form-control mr-sm-2" id="passwordRegistration2" name="passwordRegistration2" placeholder="Repite la contraseña" aria-label="contraseña">
+                        <!--PENDIENTE: El botón de mostrar/ocultar contraseña está sin acabar hasta que sepa como hacerlo con JS -->
+                        <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                        <div class="invalid-feedback" id="errorPasswordRegistration2"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nameRegistration">Nombre</label>
+                    <!--Ojo porque aquí se está poniendo un campo de email como type = "txt". Lo comento con Ismael-->
+                    <input type="text" class="form-control mr-sm-2" aria-describedby="Nombre" placeholder="Introduce tu nombre" name="nameRegistration" id="nameRegistration">
+                    <div class="invalid-feedback" id="errorNameRegistration"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="birthDateRegistration">Fecha nacimiento</label>
+                        <input type="date" class="form-control mr-sm-2" aria-describedby="Fecha de nacimiento" name="birthDateRegistration" id="birthDateRegistration">
+                        <div class="invalid-feedback" id="errorBirthDateRegistration"></div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for=" provinceRegistration">Provincia</label>
+                        <select id="provinceRegistration" class="form-control">
+                            <option selected value=""></option>
+                            <option>Álava</option>
+                            <option>Albacete</option>
+                            <option>Alicante</option>
+                            <option>Almería</option>
+                            <option>Asturias</option>
+                            <option>Ávila</option>
+                            <option>Badajoz</option>
+                            <option>Baleares</option>
+                            <option>Barcelona</option>
+                            <option>Burgos</option>
+                            <option>Cáceres</option>
+                            <option>Cádiz</option>
+                            <option>Cantabria</option>
+                            <option>Castellón</option>
+                            <option>Ceuta</option>
+                            <option>Ciudad Real</option>
+                            <option>Córdoba</option>
+                            <option>Cuenca</option>
+                            <option>Gerona</option>
+                            <option>Granada</option>
+                            <option>Guadalajara</option>
+                            <option>Guipúzcoa</option>
+                            <option>Huelva</option>
+                            <option>Huesca</option>
+                            <option>Jaén</option>
+                            <option>La Coruña</option>
+                            <option>La Rioja</option>
+                            <option>Las Palmas</option>
+                            <option>León</option>
+                            <option>Lérida</option>
+                            <option>Lugo</option>
+                            <option>Madrid</option>
+                            <option>Málaga</option>
+                            <option>Melilla</option>
+                            <option>Murcia</option>
+                            <option>Navarra</option>
+                            <option>Orense</option>
+                            <option>Palencia</option>
+                            <option>Pontevedra</option>
+                            <option>Salamanca</option>
+                            <option>Salamanca</option>
+                            <option>Santa Cruz de Tenerife</option>
+                            <option>Segovia</option>
+                            <option>Soria</option>
+                            <option>Tarragona</option>
+                            <option>Teruel</option>
+                            <option>Toledo</option>
+                            <option>Valencia</option>
+                            <option>Valladolid</option>
+                            <option>Vizcaya</option>
+                            <option>Zamora</option>
+                            <option>Zaragoza</option>
+                        </select>
+                        <div class="invalid-feedback" id="errorProvinceRegistration"></div>
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkRegistration">
+                    <label class="form-check-label" for="checkRegistration">
+                        He leído y acepto la política de privacidad
+                    </label>
+                    <div class="invalid-feedback" id="errorCheckRegistration"></div>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-dark mt-4">Iniciar sesión</button>
+                </div>
+
+            </form>
+        </article>
+
+    </section>
+
+
+    <aside>
+        <!--en principio esta página no llevará publicidad-->
+    </aside>
+
+
+    <!--PIE-->
+
+    <footer class="mt-3">
+        <div class="contenedor-pie">
+            <p>Sobre nosotros</p>
+            <a class="item-pie" href="#">Quienes somos</a>
+            <a class="item-pie" href="#">Contacta</a>
+            <a class="item-pie" href="#">Librerías</a>
+        </div>
+
+        <div class="contenedor-pie">
+            <p>Preguntas frecuentes</p>
+            <a class="item-pie" href="#">FAQ's</a>
+            <a class="item-pie" href="#">Métodos de pago</a>
+            <a class="item-pie" href="#">Devoluciones</a>
+        </div>
+
+
+    </footer>
+
+    <p id="copyright">Página web hecha con <s>mucho amor</s> mucha paciencia por Sandra</p>
+
+
+    <!--Scripts de bootstrap 4.1.3-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--Scripts principal-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

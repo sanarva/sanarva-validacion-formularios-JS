@@ -1,0 +1,238 @@
+/*Reseteamos márgenes y fuentes*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+variable,
+form,
+fieldset,
+blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*OJO: Pongo colores de fondo para tener claras las secciones. luego los eliminaré*/
+/*
+html {
+    background: gray;
+}
+
+header {
+    background: white;
+}
+
+body {
+    background: white;
+}
+
+
+
+.buscador {
+    background: purple;
+}
+
+.carrusel-destacados {
+    background: blue;
+}
+
+
+
+.contenedor-pie {
+    background: red;
+}
+*/
+
+/*A partir de aquí empiezo a poner estilos*/
+
+
+/*Se coge la letra de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/*Estilos generales*/
+html {
+    /*    width: 80%;*/
+    margin: 0 auto;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Estilos para la parte del header*/
+
+#logo {
+    width: 5%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header a {
+    color: black;
+}
+
+header a:hover {
+    text-decoration: none;
+    ;
+}
+
+/*Estilos para la barra de navegación*/
+
+.nav-link:hover {
+    border-bottom: 1px solid white;
+}
+
+.dropdown-item:hover {
+    border-bottom: 1px solid black;
+}
+
+/* Estilos para el buscador*/
+.buscador {
+    width: 50%;
+    padding: 20px 0px;
+}
+
+/* Estilos usados en la página de login*/
+.loginPage {
+    width: 50%;
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+
+.password-icon {
+    float: right;
+    position: relative;
+    margin: -25px 10px 0 0;
+    cursor: pointer;
+}
+
+/* Estilos usados en la página de registro*/
+.registration {
+    width: 80%;
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+
+
+/*Estilos para lo que será el carrusel de los libros más vendidos*/
+
+.carrusel-destacados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.carrusel-destacados .item {
+    margin: 30px;
+}
+
+.carrusel-destacados p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+
+}
+
+.carrusel-destacados .autor {
+
+    color: palevioletred;
+    font-style: italic;
+
+}
+
+
+
+/*Estilos para el footer*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    background: black;
+}
+
+
+.contenedor-pie {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+
+.contenedor-pie p {
+    font-weight: 600;
+    border-bottom: white solid 2px;
+    margin-bottom: 10px;
+}
+
+
+.contenedor-pie a:hover {
+    font-weight: 600;
+
+}
+
+footer p,
+footer a {
+    color: white;
+}
+
+
+footer a:hover {
+    color: white;
+}
+
+
+#copyright {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 0.7rem;
+}
+
+
+/*con estos tres valores (position: absolute, bottom: 0 y width:100 lo que hago es forzar al footer a que siempre queda abajo del todo, independientemente del contenido de la página. Ojo porque si el contenido ocupa más de una página, queda cortado por el footer*/
+.footer-abajo {
+    align-self: flex-end;
+    width: 100%;
+}
+
+.abajo {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
